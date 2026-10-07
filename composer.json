@@ -164,20 +164,20 @@
         "drupal-core-project-message": {
             "include-keys": ["homepage", "support"]
         },
-    "patches": {
-        "drupal/core": {
-            "field": "patches/core/2321071-74.patch",
-            "Check if rows exists": "patches/views/views_org_chart.patch",
-            "[3400522] Fix config export error by excluding time_diff.description from view config": "patches/core/Core-3400522-time-diff-missing-schema-0.patch",
-            "[3474018] Class is not added to MediaLibrary dialog": "patches/core/3474018-regression-class.patch"
-        },
-        "drupal/address": {
-            "[3460590] Module is not compatible with diff 2.0.x's": "patches/address/Diff-module-support-3460590-2.patch"
-        },
-        "drupal/views_organization_chart": {
-            "views_organization_chart - Drupal 11 compatibility fixes": "patches/views_organization_chart/views_organization_chart_drupal11_compatibility.patch"
+        "patches": {
+            "drupal/core": {
+                "field": "https://raw.githubusercontent.com/SageOakCharterSchool/openintranet/1.x/patches/core/2321071-74.patch",
+                "Check if rows exists": "https://raw.githubusercontent.com/SageOakCharterSchool/openintranet/1.x/patches/views/views_org_chart.patch",
+                "[3400522] Fix config export error by excluding time_diff.description from view config": "https://raw.githubusercontent.com/SageOakCharterSchool/openintranet/1.x/patches/core/Core-3400522-time-diff-missing-schema-0.patch",
+                "[3474018] Class is not added to MediaLibrary dialog": "https://raw.githubusercontent.com/SageOakCharterSchool/openintranet/1.x/patches/core/3474018-regression-class.patch"
+            },
+            "drupal/address": {
+                "[3460590] Module is not compatible with diff 2.0.x's": "https://raw.githubusercontent.com/SageOakCharterSchool/openintranet/1.x/patches/address/Diff-module-support-3460590-2.patch"
+            },
+            "drupal/views_organization_chart": {
+                "views_organization_chart - Drupal 11 compatibility fixes": "https://raw.githubusercontent.com/SageOakCharterSchool/openintranet/1.x/patches/views_organization_chart/views_organization_chart_drupal11_compatibility.patch"
+            }
         }
-    }
     },
     "require-dev": {
         "drupal/core-dev": "~11.3.0",
