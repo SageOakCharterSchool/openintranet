@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Knowledge Base book navigation block.
+ *
+ * Starts expanded for desktop. On small screens JS collapses it so article
+ * content is shown first; users can reopen the outline with the toggle.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-primary',
+    'accordion',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="accordion-item accordion-item-block">
+    <div class="accordion-header">
+      {{ title_prefix }}
+      {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+      <button
+        class="accordion-button d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#block-openintranet-theme-knowledge-base-book--collapse"
+        aria-expanded="true"
+        aria-controls="block-openintranet-theme-knowledge-base-book--collapse"
+        aria-label="{{ 'Toggle knowledge base navigation'|t }}"
+      >
+      </button>
+    </div>
+    {% block content %}
+      <div
+        id="block-openintranet-theme-knowledge-base-book--collapse"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#block-openintranet-theme-knowledge-base-book"
+      >
+        <div{{ content_attributes.addClass('content') }}>
+          {{ content }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+</div>
