@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "steps": {
+    "patches": {
+      "inputs": [{ "local": true, "include": ["patches"] }],
+      "commands": [{ "src": "patches", "dest": "patches" }]
+    },
+    "install:composer": {
+      "inputs": ["...", { "step": "patches" }]
+    }
+  }
+}
