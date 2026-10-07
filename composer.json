@@ -166,7 +166,7 @@
         },
         "patches": {
             "drupal/core": {
-                "field": "patches/core/2321071-74.patch"
+                "field": "patches/core/2321071-74.patch",
                 "Check if rows exists": "patches/views/views_org_chart.patch",
                 "[3400522] Fix config export error by excluding time_diff.description from view config": "https://www.drupal.org/files/issues/2025-07-01/core-3400522-time_diff-missing-schema_0.patch",
                 "[3474018] Class is not added to MediaLibrary dialog": "https://www.drupal.org/files/issues/2024-12-17/3474018-regression-class-is.patch"
