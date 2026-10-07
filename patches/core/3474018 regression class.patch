@@ -1,0 +1,12 @@
+diff --git a/core/modules/ckeditor5/ckeditor5.ckeditor5.yml b/core/modules/ckeditor5/ckeditor5.ckeditor5.yml
+index 2a2c3fd165877ef2d3790dfd63779104c425d13e..da9e8aecaf5dcb0ec5e02842ac310ee995f98a09 100644
+--- a/core/modules/ckeditor5/ckeditor5.ckeditor5.yml
++++ b/core/modules/ckeditor5/ckeditor5.ckeditor5.yml
+@@ -823,6 +823,7 @@ media_library_mediaLibrary:
+           classes:
+             ui-dialog: media-library-widget-modal
+           height: 75%
++          dialogClass: media-library-widget-modal
+   drupal:
+     label: Media Library
+     elements: false
