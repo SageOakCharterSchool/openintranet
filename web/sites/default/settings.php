@@ -100,7 +100,8 @@ $databases['default']['default'] = [
   'prefix' => '',
 ];
 
-$settings['hash_salt'] = getenv('DRUPAL_HASH_SALT');
+# $settings['hash_salt'] = getenv('DRUPAL_HASH_SALT');
+$settings['hash_salt'] = getenv('DRUPAL_HASH_SALT') ?: ($_SERVER['DRUPAL_HASH_SALT'] ?? NULL);
 
 $settings['trusted_host_patterns'] = [
   '^intranet\.sageoak\.systems$',
